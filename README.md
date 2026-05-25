@@ -1,10 +1,10 @@
-# 🤖 Gemma 3 Fine-Tuned Model — AI Integration for Laravel
+#  Gemma 3 Fine-Tuned Model — AI Integration for Laravel
 
 Fine-tune, load, and export a [Gemma 3 1B](https://huggingface.co/unsloth/gemma-3-1b-it) model using LoRA adapters on Google Colab, then serve it locally via Ollama for seamless HTTP integration with a Laravel backend.
 
 ---
 
-## 📁 Notebooks
+##  Notebooks
 
 | Notebook | Purpose |
 |---|---|
@@ -14,7 +14,7 @@ Fine-tune, load, and export a [Gemma 3 1B](https://huggingface.co/unsloth/gemma-
 
 ---
 
-## 🔧 Requirements
+##  Requirements
 
 - Google Colab (GPU runtime — T4 or better)
 - Google Drive (for storing LoRA adapter weights)
@@ -23,7 +23,7 @@ Fine-tune, load, and export a [Gemma 3 1B](https://huggingface.co/unsloth/gemma-
 
 ---
 
-## 🏋️ 1. Training (`Train InsuOps Model_V2.ipynb`)
+##  1. Training (`Train InsuOps Model_V2.ipynb`)
 
 Fine-tunes Gemma 3 1B on a custom JSON dataset using Unsloth + LoRA.
 
@@ -51,7 +51,7 @@ Google Drive → MyDrive/<YourModelFolder>/
 
 ---
 
-## 🔍 2. Loading & Inference (`Load InsuOps Model_V2.ipynb`)
+##  2. Loading & Inference (`Load InsuOps Model_V2.ipynb`)
 
 Loads the saved LoRA adapters on top of the base model for testing in Colab.
 
@@ -69,7 +69,7 @@ print(generate_answer(question))
 
 ---
 
-## 📦 3. Download & Export (`Download InsuOps Model_V2.ipynb`)
+##  3. Download & Export (`Download InsuOps Model_V2.ipynb`)
 
 Merges LoRA adapters into the base model, converts to GGUF format, and downloads to your Windows machine.
 
@@ -86,7 +86,7 @@ Merges LoRA adapters into the base model, converts to GGUF format, and downloads
 
 ---
 
-## 🪟 4. Running in Ollama (Windows)
+##  4. Running in Ollama (Windows)
 
 ### Step 1 — Move the GGUF file
 
@@ -130,7 +130,7 @@ The API will be available at `http://localhost:11434`.
 
 ---
 
-## 🔌 5. Laravel Integration
+##  5. Laravel Integration
 
 ### Simple prompt (generate)
 ```php
@@ -160,7 +160,7 @@ $text = $response->json()['message']['content'];
 
 ---
 
-## 📂 Folder Structure
+##  Folder Structure
 
 ```
 colab-notebooks/
@@ -172,7 +172,7 @@ colab-notebooks/
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - [Unsloth](https://github.com/unslothai/unsloth) — fast fine-tuning
 - [PEFT](https://github.com/huggingface/peft) — LoRA adapter management
